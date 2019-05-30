@@ -10,9 +10,9 @@ const passport = require('passport');
 
 let url;
 if (process.env.NODE_ENV === 'test') {
-    url = 'mongodb://localhost:27017/timeTableTest';
+    url = 'mongodb+srv://ihtracer:Pashaq15@cluster0-zke8o.mongodb.net/timeTableTest?retryWrites=true&w=majority';
 } else {
-    url = 'mongodb://localhost:27017/timeTable';
+    url = 'mongodb+srv://ihtracer:Pashaq15@cluster0-zke8o.mongodb.net/timeTable?retryWrites=true&w=majority';
 }
 
 
@@ -40,6 +40,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/api', router);
+
+app.get('/ping', (req, res) => {
+    res.status(200).json({ ping: 'pong'});
+});
 
 
 

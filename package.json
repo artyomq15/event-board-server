@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node ./src/app.js",
     "test": "nyc --reporter=html mocha --timeout 10000 --exit -- src/tests/*.js",
-    "dev": "nodemon ./src/app.js",
-    "postinstall": "sh mongo.sh"
+    "dev": "nodemon ./src/app.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -17,7 +16,7 @@
     "express-jwt": "^5.3.1",
     "express-session": "^1.15.6",
     "jsonwebtoken": "^8.3.0",
-    "mongodb": "^3.1.4",
+    "mongodb": "^3.2.6",
     "mongoose": "^5.2.14",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
