@@ -49,8 +49,8 @@ app.get('/ping', (req, res) => {
 
 mongoose.connect(url, { useNewUrlParser: true }).then(
     () => {
-        app.listen(3000, function() {
-            console.log('Listening on port 3000...');
+        app.listen(process.env.PORT || 3000, function() {
+            console.log('Listening on port ' + process.env.PORT || 3000 + '...');
         });
     },
     (err) => {
